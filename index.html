@@ -11,8 +11,11 @@
 	</head>
 	<body>
 		<script>
+			function random(min, max) {
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}
 			function gamble() {
-				let number = Math.random(1,10);
+				let number = random(1,10);
 				document.getElementById("button").disabled = true;
 				alert("Let's go gambling!!");
 				let input = prompt("Enter a number between 1 and 10:");
